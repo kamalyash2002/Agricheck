@@ -1,0 +1,285 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a386074633.js" crossorigin="anonymous"></script>
+    <title>Home Page</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+    <!-- css added -->
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar thorough bootstrap5 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: url(static/img/background.jpg);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home"
+          ><span style="color: white;">Agri</span><span></span><span style="color: rgb(10, 198, 10)">check</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color: white;"">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color: white;"">AboutUs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/contactus" style="color: white;"">ContactUs</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+            <button type="submit"><a href="/signout">SignOut</a></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end here -->
+    {% for message in messages %}
+    <div
+      class="alert alert-{{ message.tags }} alert-dismissible fade show"
+      role="alert">
+      <strong>Message:</strong> {{ message }}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+
+    <!-- here the services content starts -->
+    <div class="container-fluid" style="background-color: rgb(53, 113, 73);color: white; text-align: center;">
+        <h3>Products</h3>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card mb-3" style="">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="https://cdn-images-1.medium.com/max/1024/0*Jurj7Un4YfgiUIET" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Agridata</h5>
+                      <p class="card-text">Agridata is an agricultural data source that provides valuable insights and information on farming practices, crop production, and market trends.By providing accurate and up-to-date information, Agridata enables farmers to optimize crop management, reduce costs, and increase profits, making it a valuable resource for the agriculture industry.</p>
+                      <p class="card-text"><button type="submit" class="btn btn-primary text-white"><a href="/agridata"style="text-decoration:none;color: white">Check It Out</a></button></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="card mb-3" style="">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="https://images.squarespace-cdn.com/content/v1/57462f541bbee075320514a9/cff9327f-5922-4866-a0da-6fcb4c201050/wheat+stock+photo.jpeg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Agricheck</h5>
+                      <p class="card-text">Agricheck is a crop prediction tool that helps farmers and agricultural stakeholders make informed decisions about crop management and production.The tool provides accurate crop predictions, which can help farmers optimize crop planning, reduce risks, and increase productivity. Agricheck is a valuable tool for the agriculture industry, as it helps farmers make data-driven decisions and improve their overall crop management practices.</p>
+                      <p class="card-text"><button type="submit" class="btn btn-primary text-white"><a href="/agricheck"style="text-decoration:none;color: white">Check It Out</a></button></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="card mb-3" style="">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="https://media.istockphoto.com/id/1321768710/photo/owning-an-agricultural-business.jpg?s=612x612&w=0&k=20&c=0fGHoF_X5E03lnLegMgkF4x41fS3d0cst-Wzt67TYLY=" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Expert Advice</h5>
+                      <p class="card-text">The Expert Advice feature of Agricheck is a powerful tool that provides farmers with personalized guidance and recommendations on crop management practices.With the Expert Advice feature, farmers can benefit from data-driven insights and make informed decisions that lead to better crop management practices and increased productivity.</p>
+                      <p class="card-text"><button type="submit" class="btn btn-primary text-white"><a href="/expert_advice"style="text-decoration:none;color: white">Check It Out</a></button></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+      <!-- footer -->
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Links  -->
+  <section class="" style="padding-top: 5px;">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Agricheck
+          </h6>
+          <p>
+            A gift to the Hardworking farmers of the country that will provide the guidance to the farmers.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="/services" class="text-reset">Agridata</a>
+          </p>
+          <p>
+            <a href="/services" class="text-reset">Agricheck</a>
+          </p>
+          <p>
+            <a href="/services" class="text-reset">Expert Talk</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="/home" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="/services" class="text-reset">Services</a>
+          </p>
+          <p>
+            <a href="/aboutus" class="text-reset">AboutUs</a>
+          </p>
+          <p>
+            <a href="/contactus" class="text-reset">ContactUs</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Haroli, Una, H.P, India</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            21156@iiitu.ac.in
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 6397010486</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+</footer>
+<!-- Footer -->
+    <footer class="bg-light text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #55acee;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #dd4b39;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #ac2bac;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <!-- Github -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="/home">Agricheck.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
