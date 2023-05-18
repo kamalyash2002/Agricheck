@@ -15,5 +15,6 @@ urlpatterns = [
     path('agricheck',views.agricheck,name="agricheck"),
     path('agridata',views.agridata,name="agridata"),
     path('expert_advice',views.expert_advice,name = "expert_advice"),
-    path('expert_funct',views.expert_funct,name = "expert_funct")
+    path('expert_funct',views.expert_funct,name = "expert_funct"),
+    path('aboutus',views.aboutus,name="aboutus")
 ]

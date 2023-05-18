@@ -132,7 +132,7 @@ def signout(request):
 
 
 # functionality function are there
-@login_required
+@login_required(login_url="/signin")
 def services(request):
     return render(request,"services.html")
 def contactus(request):
@@ -185,3 +185,6 @@ def expert_funct(request):
     #     return HttpResponse("Get request")
     return render(request,"expert_advice.html")
 
+# about us page route
+def aboutus(request):
+    return render(request,"about.html")

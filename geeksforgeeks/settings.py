@@ -141,5 +141,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # it defines the path of static folder through which we can access the static components :)
 # donot put the files that can create the security loopholes in the static folder
 STATICFILES_DIRS = [
-    "/Users/yashkamalsaxena/Desktop/Code/Projects/DjangoLogin/Agricheck/static"
+    "/Users/yashkamalsaxena/Desktop/Code/Projects/Agricheck/Agricheck/static"
 ]
