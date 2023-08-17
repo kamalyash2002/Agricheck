@@ -80,10 +80,10 @@
               <a class="nav-link active" aria-current="page" href="/services" style="color: white;"> Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/aboutus" style="color: white;">AboutUs</a>
+              <a class="nav-link active" aria-current="page" href="/aboutus" style="color: white;">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/contactus" style="color: white;">ContactUs</a>
+              <a class="nav-link active" aria-current="page" href="/contactus" style="color: white;">Contact Us</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -93,11 +93,13 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-success" type="submit">
               Search
             </button>
 
-            <button class="btn btn-outline-success"type="submit" style="background-color: green;margin-left: 1%;"><a href="/signout" style="background-color: green; color: white; text-decoration: none;">SignOut</a></button>
+            {% if user.is_authenticated %}
+              <button class="btn btn-outline-success"type="submit" style="background-color: green;margin-left: 1%;"><a href="/signout" style="background-color: green; color: white; text-decoration: none;">SignOut</a></button>
+            {% endif %}
           </form>
         </div>
       </div>

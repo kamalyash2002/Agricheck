@@ -50,7 +50,9 @@
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
-            <button type="submit"><a href="/signout">SignOut</a></button>
+            {% if user.is_authenticated %}
+              <button class="btn btn-outline-success"type="submit" style="background-color: green;margin-left: 1%;"><a href="/signout" style="background-color: green; color: white; text-decoration: none;">SignOut</a></button>
+            {% endif %}
           </form>
         </div>
       </div>
